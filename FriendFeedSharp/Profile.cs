@@ -13,6 +13,7 @@ namespace FriendFeedSharp
         public User User { get; set; }
         public ServiceList Services { get; set; }
         public UserList Subscriptions { get; set; }
+        public ListList Lists { get; set; }
 
         public Profile()
         {
@@ -36,6 +37,13 @@ namespace FriendFeedSharp
             {
                 Subscriptions.Add(new User(child));
             }
+
+            Lists = new ListList();
+                  foreach( XmlElement child in element.GetElementsByTagName("list"))
+                  {
+                      Lists.Add( new List(child));
+                  }
+          
 
         }
     }

@@ -3,3 +3,5 @@ C:\Respositories\FriendFeedSharp\FriendFeedTester\bin\Debug\FriendFeedTester.pdb
 C:\Respositories\FriendFeedSharp\FriendFeedTester\obj\Debug\ResolveAssemblyReference.cache
 C:\Respositories\FriendFeedSharp\FriendFeedTester\obj\Debug\FriendFeedTester.exe
 C:\Respositories\FriendFeedSharp\FriendFeedTester\obj\Debug\FriendFeedTester.pdb
+C:\Respositories\FriendFeedSharp\FriendFeedTester\bin\Debug\FriendFeedSharp.dll
+C:\Respositories\FriendFeedSharp\FriendFeedTester\bin\Debug\FriendFeedSharp.pdb
