@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Xml;
 
 namespace FriendFeedSharp
 {
-
     public class Like
     {
         public DateTime Date;
@@ -22,5 +18,4 @@ namespace FriendFeedSharp
             User = new User(Util.ChildElement(element, "user"));
         }
     }
-
 }

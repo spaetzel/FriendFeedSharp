@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using FriendFeedSharp;
 
 namespace FriendFeedTester
@@ -22,7 +20,7 @@ namespace FriendFeedTester
             // Get the profile for a list
             ListProfile listProfile = client.FetchListProfile(profile.Lists.First().Nickname);
 
-            Console.WriteLine(String.Format("The list, {0} has {1} users", listProfile.Name,  listPrThofile.Users.Count()));
+            Console.WriteLine(String.Format("The list, {0} has {1} users", listProfile.Name, listProfile.Users.Count()));
 
             User firstUser = listProfile.Users.First();
 

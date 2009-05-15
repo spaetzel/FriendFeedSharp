@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
+﻿using System.Xml;
 
 namespace FriendFeedSharp
 {
     public class Thumbnail
     {
-        public string Url { get; set; }
-        public string Width { get; set; }
-        public string Height { get; set; }
-
         public Thumbnail()
         {
         }
@@ -22,5 +14,9 @@ namespace FriendFeedSharp
             Width = Util.ChildValue(element, "width");
             Height = Util.ChildValue(element, "height");
         }
+
+        public string Url { get; set; }
+        public string Width { get; set; }
+        public string Height { get; set; }
     }
 }

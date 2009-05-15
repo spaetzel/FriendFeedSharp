@@ -1,24 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Xml;
 
 namespace FriendFeedSharp
 {
     public class Entry
     {
-        public string Id { get; set; }
-        public string Title { get; set; }
-        public string Link { get; set; }
-        public DateTime Published { get; set; }
-        public DateTime Updated { get; set; }
-        public User User { get; set; }
-        public Service Service { get; set; }
-        public CommentList Comments { get; set; }
-        public LikeList Likes { get; set; }
-        public MediaList Media { get; set; }
-
         public Entry()
         {
         }
@@ -49,5 +35,16 @@ namespace FriendFeedSharp
                 Media.Add(new Media(child));
             }
         }
+
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public string Link { get; set; }
+        public DateTime Published { get; set; }
+        public DateTime Updated { get; set; }
+        public User User { get; set; }
+        public Service Service { get; set; }
+        public CommentList Comments { get; set; }
+        public LikeList Likes { get; set; }
+        public MediaList Media { get; set; }
     }
 }

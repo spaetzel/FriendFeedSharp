@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
+﻿using System.Xml;
 
 namespace FriendFeedSharp
 {
     public class Media
     {
-        public string Title { get; set; }
-        public string Player { get; set; }
-        public ThumbnailList Thumbnails { get; set; }
-        public ContentList Content { get; set; }
-        public string Link { get; set; }
-
         public Media()
         {
         }
@@ -34,5 +24,11 @@ namespace FriendFeedSharp
                 Content.Add(new Content(child));
             }
         }
+
+        public string Title { get; set; }
+        public string Player { get; set; }
+        public ThumbnailList Thumbnails { get; set; }
+        public ContentList Content { get; set; }
+        public string Link { get; set; }
     }
 }

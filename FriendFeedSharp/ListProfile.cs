@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
-
+﻿using System.Xml;
 
 namespace FriendFeedSharp
 {
     public class ListProfile : List
     {
-        public UserList Users { get; set; }
-
-
         public ListProfile()
         {
         }
@@ -25,5 +17,7 @@ namespace FriendFeedSharp
                 Users.Add(new User(child));
             }
         }
+
+        public UserList Users { get; set; }
     }
 }

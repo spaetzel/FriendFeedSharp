@@ -1,25 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
+﻿using System.Xml;
 
 namespace FriendFeedSharp
 {
     public class UserProfile : User
     {
-        public string Status { get; set; }
-        public string Name { get; set; }
-        public User User { get; set; }
-        public ServiceList Services { get; set; }
-        public UserList Subscriptions { get; set; }
-        public ListList Lists { get; set; }
-
         public UserProfile()
         {
         }
 
-          public UserProfile(XmlElement element) : base( element )
+        public UserProfile(XmlElement element) : base(element)
         {
             User = new User(element);
 
@@ -39,12 +28,17 @@ namespace FriendFeedSharp
             }
 
             Lists = new ListList();
-                  foreach( XmlElement child in element.GetElementsByTagName("list"))
-                  {
-                      Lists.Add( new List(child));
-                  }
-          
-
+            foreach (XmlElement child in element.GetElementsByTagName("list"))
+            {
+                Lists.Add(new List(child));
+            }
         }
+
+        public string Status { get; set; }
+        public string Name { get; set; }
+        public User User { get; set; }
+        public ServiceList Services { get; set; }
+        public UserList Subscriptions { get; set; }
+        public ListList Lists { get; set; }
     }
 }

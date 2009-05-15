@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
+﻿using System.Xml;
 
 namespace FriendFeedSharp
 {
     public class List
     {
-        public string Id { get; set; }
-        public string Nickname { get; set; }
-        public string Url { get; set; }
-        public string Name { get; set; }
-
         public List()
         {
         }
@@ -24,5 +15,10 @@ namespace FriendFeedSharp
             Url = Util.ChildValue(element, "url");
             Name = Util.ChildValue(element, "name");
         }
+
+        public string Id { get; set; }
+        public string Nickname { get; set; }
+        public string Url { get; set; }
+        public string Name { get; set; }
     }
 }
