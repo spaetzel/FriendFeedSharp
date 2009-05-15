@@ -5,3 +5,5 @@
 *.tmproj
 .DS_Store
 *.cache
+*.manifest
+*/obj/*

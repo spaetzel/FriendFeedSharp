@@ -1,6 +1,0 @@
-C:\Respositories\FriendFeedSharp\FriendFeedSharp\FriendFeedSharp\obj\Debug\ResolveAssemblyReference.cache
-C:\Respositories\FriendFeedSharp\FriendFeedSharp\obj\Debug\ResolveAssemblyReference.cache
-C:\Respositories\FriendFeedSharp\FriendFeedSharp\bin\Debug\FriendFeedSharp.dll
-C:\Respositories\FriendFeedSharp\FriendFeedSharp\bin\Debug\FriendFeedSharp.pdb
-C:\Respositories\FriendFeedSharp\FriendFeedSharp\obj\Debug\FriendFeedSharp.dll
-C:\Respositories\FriendFeedSharp\FriendFeedSharp\obj\Debug\FriendFeedSharp.pdb
