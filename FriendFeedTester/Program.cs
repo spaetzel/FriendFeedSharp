@@ -15,11 +15,14 @@ namespace FriendFeedTester
 
             // Get my profile
 
-            Profile profile = client.FetchUserProfile("ffsharp");
+            UserProfile profile = client.FetchUserProfile("ffsharp");
 
             Console.WriteLine(profile.Lists.Count());
 
 
+            ListProfile listProfile = client.FetchListProfile(profile.Lists.First().Nickname);
+
+            Console.WriteLine(listProfile.Users.Count());
         }
     }
 }

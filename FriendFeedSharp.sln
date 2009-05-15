@@ -5,6 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendFeedSharp", "FriendFe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1E9D312-177D-4224-89C1-7043C71B9E21}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		Readme.markdown = Readme.markdown
 	EndProjectSection
 EndProject

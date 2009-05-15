@@ -6,7 +6,7 @@ using System.Xml;
 
 namespace FriendFeedSharp
 {
-    public class Profile
+    public class UserProfile : User
     {
         public string Status { get; set; }
         public string Name { get; set; }
@@ -15,15 +15,15 @@ namespace FriendFeedSharp
         public UserList Subscriptions { get; set; }
         public ListList Lists { get; set; }
 
-        public Profile()
+        public UserProfile()
         {
         }
 
-          public Profile(XmlElement element)
+          public UserProfile(XmlElement element) : base( element )
         {
             User = new User(element);
 
-            Name = Util.ChildValue(element, "name");
+
             Status = Util.ChildValue(element, "status");
 
             Services = new ServiceList();

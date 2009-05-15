@@ -238,14 +238,29 @@ namespace FriendFeedSharp {
         return FetchFeed("/api/feed/home", start, num);
     }
 
-    public Profile FetchUserProfile(string nickname)
+    public UserProfile FetchUserProfile(string nickname)
     {
      
 
         HttpWebResponse response = MakeRequest(string.Format("/api/user/{0}/profile", nickname), null, null, null);
         XmlDocument document = new XmlDocument();
         document.Load(response.GetResponseStream());
-        return new Profile(document.DocumentElement);
+        return new UserProfile(document.DocumentElement);
+    }
+
+    public ListProfile FetchListProfile(string nickname)
+    {
+        if (String.IsNullOrEmpty(this.Nickname))
+        {
+            throw new ArgumentException("Must have an authenticated client to retrieve list profile information");
+        }
+
+
+        HttpWebResponse response = MakeRequest(string.Format("/api/list/{0}/profile", nickname), null, null, null);
+        XmlDocument document = new XmlDocument();
+        document.Load(response.GetResponseStream());
+        return new ListProfile(document.DocumentElement);
+
     }
 
     /// <summary>

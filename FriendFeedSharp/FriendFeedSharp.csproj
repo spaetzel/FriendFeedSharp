@@ -53,6 +53,7 @@
     <Compile Include="Feed.cs" />
     <Compile Include="FriendFeed.cs" />
     <Compile Include="Like.cs" />
+    <Compile Include="ListProfile.cs" />
     <Compile Include="Lists\CommentList.cs" />
     <Compile Include="Lists\ContentList.cs" />
     <Compile Include="Lists\LikeList.cs" />
@@ -62,7 +63,7 @@
     <Compile Include="Lists\ThumbnailList.cs" />
     <Compile Include="Lists\UserList.cs" />
     <Compile Include="Media.cs" />
-    <Compile Include="Profile.cs" />
+    <Compile Include="UserProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="Thumbnail.cs" />
