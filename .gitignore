@@ -1,0 +1,7 @@
+*.dll
+*.pdb
+*.suo
+*.Publish.xml
+*.tmproj
+.DS_Store
+*.cache
