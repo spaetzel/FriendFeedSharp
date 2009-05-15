@@ -2,3 +2,7 @@ This is a C# Library for interacting with the [FriendFeed Api](http://friendfeed
 
 It is based on the C# code provided by FriendFeed [here](http://code.google.com/p/friendfeed-api/)
 but extented to support more/all of the methods available through the API.
+
+The library is currently incomplete. Notably, it lacks support for Rooms or publishing Comments and Likes.
+
+Please fork this project and submit pull requests to get your updates to the project.
