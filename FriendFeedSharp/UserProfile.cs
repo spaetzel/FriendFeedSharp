@@ -10,7 +10,7 @@ namespace FriendFeedSharp
 
         public UserProfile(XmlElement element) : base(element)
         {
-            User = new User(element);
+            
 
 
             Status = Util.ChildValue(element, "status");
@@ -36,7 +36,6 @@ namespace FriendFeedSharp
 
         public string Status { get; set; }
         public string Name { get; set; }
-        public User User { get; set; }
         public ServiceList Services { get; set; }
         public UserList Subscriptions { get; set; }
         public ListList Lists { get; set; }

@@ -11,9 +11,11 @@ namespace FriendFeedTester
             // Create an authenticated client
             FriendFeedClient client = new FriendFeedClient("ffsharp", "sacs857cut");
 
+
+
             // Get my profile
 
-            UserProfile profile = client.FetchUserProfile("ffsharp");
+            UserProfile profile = client.FetchUserProfile(client.Nickname);
 
             Console.WriteLine(String.Format("This user's id is {0}, they have created {1} user lists", profile.Id, profile.Lists.Count() ));
 
