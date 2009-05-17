@@ -472,17 +472,37 @@ namespace FriendFeedSharp
                 request.Method = "GET";
             }
 
+            bool forceAuthentication = true;
+
             // Add the HTTP Basic auth header if we have credentials
             if (_nickname != null && _remoteKey != null)
             {
-                var cache = new CredentialCache
+                if (forceAuthentication)
+                {
+                    // Make sure that the request is authenticated
+
+                    string cre = String.Format("{0}:{1}", _nickname, _remoteKey);
+
+                    byte[] bytes = Encoding.ASCII.GetBytes(cre);
+
+                    string base64 = Convert.ToBase64String(bytes);
+
+                    request.Headers.Add("Authorization", "basic " + base64); 
+                }
+                else
+                {
+                    // Only authenticate if challenged by the server
+                    var cache = new CredentialCache
                                 {
                                     {
                                         new Uri("http://friendfeed.com/api/"), "Basic",
                                         new NetworkCredential(_nickname, _remoteKey)
                                         }
                                 };
-                request.Credentials = cache;
+                    request.Credentials = cache;
+                }
+
+                
             }
 
             Debug.WriteLine("Downloading " + url);
