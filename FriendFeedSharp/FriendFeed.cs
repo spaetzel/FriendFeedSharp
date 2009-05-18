@@ -333,6 +333,39 @@ namespace FriendFeedSharp
             return FetchFeed("/api/feed/user/" + HttpUtility.UrlEncode(nickname), start, num);
         }
 
+
+
+
+        /// <summary>
+        /// Fetches the most recent entries for the list with the given nickname.
+        /// 
+        /// authentication is required.
+        /// </summary>
+        public Feed FetchListFeed(string nickname)
+        {
+            return FetchListFeed(nickname, null);
+        }
+
+        public Feed FetchListFeed(string nickname, string service)
+        {
+            return FetchListFeed(nickname, null, 0);
+        }
+
+        public Feed FetchListFeed(string nickname, string service, int start)
+        {
+            return FetchListFeed(nickname, null, 0, 30);
+        }
+
+        public Feed FetchListFeed(string nickname, string service, int start, int num)
+        {
+            return FetchFeed("/api/feed/list/" + HttpUtility.UrlEncode(nickname), service, start, num);
+        }
+
+        public Feed FetchListFeed(string nickname, int start, int num)
+        {
+            return FetchFeed("/api/feed/list/" + HttpUtility.UrlEncode(nickname), start, num);
+        }
+
         /// <summary>
         /// Fetches the most recent entries for the given list of users.
         /// 
@@ -480,6 +513,7 @@ namespace FriendFeedSharp
                 if (forceAuthentication)
                 {
                     // Make sure that the request is authenticated
+                    // This snippet comes from here: http://msdn.microsoft.com/en-us/library/system.net.httpwebrequest.preauthenticate.aspx
 
                     string cre = String.Format("{0}:{1}", _nickname, _remoteKey);
 

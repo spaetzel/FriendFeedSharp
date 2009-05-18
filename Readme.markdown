@@ -10,8 +10,10 @@ Please fork this project and submit pull requests to get your updates to the pro
 Notable Changes From friendfeed-api-0.9
 ========================================
 - Support for reading User Lists
+- Support for fetching User list feeds
 - Works in .net 3.5 (Had XML parsing issues)
 - All classes in seperate files
 - All return lists have their own type to support returning them from WCF services
 - All return classes have a default constructor to support returning them from WCF services
+
 
